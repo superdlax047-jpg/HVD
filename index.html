@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Valentine's Day ❤️</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating flowers container -->
+    <div class="flowers-container" id="flowersContainer"></div>
+
+    <div class="valentine-header">
+        <h1 class="valentine-title">💖 Happy Valentines Day 💖</h1>
+    </div>
+
+    <div class="message">
+        <p>To the most special person in my life 🌸</p>
+        <p>You are the most beautiful flower in my life.</p>
+        <p>Thank you for filling my world with love and happiness.</p>
+        
+        <div class="button-container">
+            <button class="btn btn-message" onclick="showMessage()">💌 Message</button>
+            <button class="btn btn-pictures" onclick="showPictures()">🖼️ Pictures</button>
+            <button class="btn btn-surprise" onclick="showLove()">💝 Surprise</button>
+        </div>
+    </div>
+
+    <!-- Message Modal -->
+    <div id="messageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('messageModal')">&times;</span>
+            <h2>💌 A Message for You</h2>
+            <p>Dear Claire,<br><br>
+            Hello love haha sorry wala me flowers ngayon, Valentine ito nalang low budget muna. Pero gusto ko lang sabihin na sobrang proud ako sa lahat ng achievements mo sa bawat pagod, sakripisyo, at tagumpay na pinaghirapan mo. Nakikita ko lahat yun, at hanga ako sayo palagi. Sana manatili kang matatag at malakas sa lahat ng bagay. Alam ko hindi laging madali, pero nandito lang ako para sumuporta at umalalay sayo, gaya ng palagi mong ginagawa para sakin. Maraming salamat kasi palagi kang nasa tabi ko through ups and downs. Sa mga panahong masaya tayo at lalo na sa mga panahong nahihirapan ako, hindi mo ako iniwan. Sobrang thankful ako na ikaw ang kasama ko sa journey na to. Sana matupad natin lahat ng pangarap natin hindi lang sa relationship natin, kundi pati sa mga personal goals at pangarap natin sa buhay. Sana sabay tayong umangat, sabay tayong magtagumpay, at sabay nating marating yung future na pinapangarap natin para sa isa’t isa. 💗  <br><br>
+            Forever yours ❤️</p>
+        </div>
+    </div>
+
+    <!-- Pictures Modal -->
+    <div id="picturesModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('picturesModal')">&times;</span>
+            <h2>🖼️ Our Memories</h2>
+            
+            <!-- Image Viewer (shown on top when picture is clicked) -->
+            <div id="imageViewerOverlay" class="image-viewer-overlay" style="display: none;">
+                <span class="close" onclick="closeImageViewer()">&times;</span>
+                <img id="viewerImage" src="" alt="Full size image">
+                <p id="viewerCaption"></p>
+            </div>
+            
+            <div class="pictures-gallery" id="picturesGallery">
+                <!-- Replace image names with your actual image filenames -->
+                <div class="picture-item" onclick="showImageViewer('FirstPictureTogether.jpg', 'First Day Together')">
+                    <img src="FirstPictureTogether.jpg" alt="First Valentines Day Together">
+                    <p>First Valentines Day Together</p>
+                </div>
+                <div class="picture-item" onclick="showImageViewer('sportfest.jpg', 'When it all started')">
+                    <img src="sportfest.jpg" alt="First Meet Up">
+                    <p>When it all started</p>
+                </div>
+                <div class="picture-item" onclick="showImageViewer('Unforgettable Moments.jpg', 'Unforgettable Moments')">
+                    <img src="Unforgettable Moments.jpg" alt="Unforgettable Moments">
+                    <p>Unforgettable Moments</p>
+                </div>
+                <div class="picture-item" onclick="showImageViewer('YouandMe.jpg', 'You & Me')">
+                    <img src="YouandMe.jpg" alt="Kulitan Moments">
+                    <p>You & Me</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background music toggle -->
+    <div class="music-wrapper">
+        <button id="musicToggle" class="music-control" aria-label="Toggle background music">🔊</button>
+    </div>
+    <audio id="bgMusic" src="TheOnlyException.mp3" loop autoplay muted></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
